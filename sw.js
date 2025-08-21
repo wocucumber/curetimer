@@ -30,7 +30,7 @@ self.addEventListener("install", function(e) {
   console.log("Service worker was registered.");
   e.waitUntil(
     caches.open(cacheName).then(cache => {
-      return cache.addAll(filesToCache)
+      return cache.addAll(filesToCache.map(e=>"/curetimer"+e))
     })
   );
 });
