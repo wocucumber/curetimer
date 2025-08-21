@@ -1,0 +1,154 @@
+* {
+  overflow: visible !important;
+  font-family: "Potta One", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+page {
+  display: block;
+  background-size: cover;
+  background-position: 50% 50%
+}
+page:not(.page-shown) {
+  display: none;
+}
+
+.hundred {
+  width: 100%;
+  height: 100%;
+}
+
+.notify {
+  text-align: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url("../images/bgTitle.PNG");
+}
+
+.title-logo-wrapper {
+  margin: auto;
+
+  width: 100%;
+  max-width: 800px;
+
+  position: relative;
+}
+.title-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.title-logo-a {
+  animation: title-logo 1s 1 ease-out;
+}
+.title-logo-b {
+  animation: title-logo 1.5s 1;
+  animation-timing-function: linear(0, 0.146 5.5%, 0.399 15.9%, 0.519 20.6%, 0.648 25.3%, 0.905 34.2%, 1 37.8%, 0.924 41.2%, 0.895 42.8%, 0.872 44.3%, 0.854 45.8%, 0.841 47.3%, 0.834 48.7%, 0.831 50.2%, 0.833 51.5%, 0.84 52.9%, 0.85 54.3%, 0.864 55.7%, 0.894 58.1%, 0.972 63.4%, 1 65.5%, 0.978 67.5%, 0.963 69.4%, 0.954 71.2%, 0.951 73.1%, 0.953 74.8%, 0.959 76.6%, 0.99 82.3%, 1 84.5%, 0.993 86.9%, 0.991 89.3%, 0.999 96.6%, 1);
+}
+
+@keyframes title-logo {
+  0% {
+    transform: translateY(-400px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.title-btn-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-bottom: 50px;
+}
+.title-btn {
+  text-align: center;
+}
+
+@keyframes title-btn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.title-btn > img {
+  width: 400px;
+  max-width: 80%;
+  transition: .5s all;
+  cursor: pointer;
+}
+.title-btn > img:hover {
+  filter: blur(3px) brightness(1.1) ;
+}
+.title-btn.anim > img {
+  animation: title-btn 1s infinite;
+}
+
+
+.main {
+  background-image: url("../images/bgMain.PNG");
+}
+
+/* .main-bar-wrapper {
+  height: 100%;
+} */
+.main-bar {
+  position: fixed;
+  top: calc((100% - 70px) * 0);
+  left: calc(50% - (175px / 2));
+  height: 70px;
+
+  transition: 1s transform;
+}
+.main-bar.turn {
+  transform: rotate(0.5turn);
+}
+
+.main-reaming-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-reaming-wrapper2 {
+  text-align: center;
+}
+.main-reaming-text {
+  font-family: "Potta One";
+  font-size: 8vw;
+}
+.main-reaming-time {
+  display: flex;
+  justify-content: center;
+
+  font-family: "Mozilla Text";
+  font-size: 30vw;
+
+  line-height: 30vw;
+}
+.main-reaming-timer-time {
+  font-family: "Mozilla Text";
+}
+.main-reaming-timer-sec {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  line-height: 3;
+  
+  font-family: "Potta One";
+  font-size: 5vw;
+}

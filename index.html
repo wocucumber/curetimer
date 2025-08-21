@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja" class="hundred">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>キュアTimer</title>
+  <link rel="stylesheet" href="css/tengu.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js/pageManager.js"></script>
+  <script src="index.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mozilla+Text&family=Potta+One&display=swap" rel="stylesheet">
+
+  <link rel="manifest" href="pwa/manifest.json">
+</head>
+<body class="hundred">
+  <page notify class="notify hundred">
+    <h1>通知が許可されていないようだね</h1>
+    <p>通知を許可した方が便利だと思うけど...</p>
+    <div class="notify-btns">
+      <div class="btn warning notify-btn-deny">許可しない</div>
+      <div class="btn primary notify-btn-grant">許可する</div>
+    </div>
+  </page>
+  <page title class="title hundred">
+    <div class="title-logo-wrapper">
+      <img class="title-logo-a title-logo" src="images/logoA.PNG" />
+      <img class="title-logo-b title-logo" style="display: none;" src="images/logoB.PNG" />
+    </div>
+    <div class="title-btn-wrapper">
+      <div class="title-btn" style="display: none;">
+        <img src="images/startBtn.PNG">
+      </div>
+    </div>
+  </page>
+  <page main class="main hundred">
+    <div class="main-reaming-wrapper hundred">
+      <div class="main-reaming-wrapper2">
+        <div class="main-reaming-text">
+          飲み込むまで
+        </div>
+        <div class="main-reaming-time">
+          <div class="main-reaming-timer-time">10</div>
+          <div class="main-reaming-timer-sec">秒</div>
+        </div>
+      </div>
+    </div>
+    <div class="main-bar-wrapper">
+      <img class="main-bar" src="images/startBtn.PNG" />
+    </div>
+  </page>
+</body>
+</html>
