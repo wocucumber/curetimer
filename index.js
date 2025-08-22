@@ -11,9 +11,9 @@ const STATES = {
   FIVE: 1
 };
 const audios = {
-  wanko: new Audio("audios/wnk.mp3"),
-  tanutanu: new Audio("audios/tntn.mp3"),
-  start: new Audio("audios/start"+(Math.floor(Math.random() * START_FILE_AMOUNT) + 1)+".mp3")
+  wanko: {play(){}},
+  tanutanu: {play(){}},
+  start: {play(){}},
 }
 
 /** @type {HTMLElement} */
@@ -93,6 +93,9 @@ function setupClickEvents() {
     // navigator.serviceWorker.controller.postMessage("テストザマス", [new MessageChannel().port2])
 
     pages.main.change();
+
+    audios.start = new Audio("audios/start"+(Math.floor(Math.random() * START_FILE_AMOUNT) + 1)+".mp3");
+
     startTimer();
 
     audios.wanko    = new Audio("audios/wnk.mp3");
