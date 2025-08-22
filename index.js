@@ -1,3 +1,6 @@
+const START_FILE_AMOUNT = 8;
+
+
 const pages = {
   notify: new Page("notify"),
   title: new Page("title"),
