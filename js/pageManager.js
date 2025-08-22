@@ -22,6 +22,9 @@ class Page {
       setTimeout(() => {
         $(".page-shown").removeClass("page-shown");
         this.#jq.fadeIn(500).addClass("page-shown");
+        setTimeout(() => {
+          this.#jq.display = null;
+        }, 500);
       }, 500);
     } else {
       $(".page-shown").removeClass("page-shown");
