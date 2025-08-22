@@ -6,7 +6,7 @@
     "display": "standalone",
     "background_color": "white",
     "theme_color": "white",
-    "scope": "/curetimer/",
+    "scope": "../curetimer/",
     "icons": [
         {
             "src": "favicons/icon-16x16.png",
