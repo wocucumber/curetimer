@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "Potta One";
+  font-weight: 400;
+  src: url("../fonts/PottaOne-Regular.ttf");
+}
+@font-face {
+  font-family: "Mozilla Text";
+  font-weight: 400;
+  src: url("../fonts/MozillaText-Regular.ttf");
+}
+
 * {
   overflow: visible !important;
   font-family: "Potta One", sans-serif;
