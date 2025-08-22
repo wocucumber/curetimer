@@ -30,7 +30,8 @@ self.addEventListener("install", function(e) {
   console.log("Service worker was registered.");
   e.waitUntil(
     caches.open(cacheName).then(cache => {
-      return cache.addAll(filesToCache.map(e=>"/curetimer"+e))
+      return cache.addAll([...filesToCache.map(e=>"/curetimer"+e), 
+        "https://fonts.gstatic.com/s/pottaone/v18/FeVSS05Bp6cy7xI-Yfxg2pRmuWxWwg.woff2"])
     })
   );
 });
