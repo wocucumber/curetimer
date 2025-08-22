@@ -11,6 +11,9 @@ class Page {
   show(anim=true) {
     if (anim) {
       this.#jq.fadeIn(500).addClass("page-shown");
+      setTimeout(() => {
+        this.#jq.css("display", null);
+      }, 600);
     } else {
       this.#jq.addClass("page-shown");
     }
@@ -24,7 +27,7 @@ class Page {
         this.#jq.fadeIn(500).addClass("page-shown");
         setTimeout(() => {
           this.#jq.css("display", null);
-        }, 500);
+        }, 600);
       }, 500);
     } else {
       $(".page-shown").removeClass("page-shown");
