@@ -48,12 +48,12 @@ function main() {
     alert("サービスワーカーが見つからなかった...")
   }
 
-  if (Notification.permission !== "granted") {
-    pages.notify.show(false);
-    setupNotifyPage();
-  } else {
+  if (!("Notification" in window) || Notification.permission === "granted") {
     pages.title.show(false);
     showLogo();
+  } else {
+    pages.notify.show(false);
+    setupNotifyPage();
   }
   
   setupClickEvents();
