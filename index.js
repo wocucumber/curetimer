@@ -199,9 +199,10 @@ function finishFive() {
 }
 
 function sendMessage(msg) {
-  // if (!navigator.serviceWorker.controller) return location.reload(alert("コントローラー不在のためリロード"));
-
+  if (!navigator.serviceWorker.controller) return console.log("Service worker controller is not found.");
+  
   navigator.serviceWorker.controller.postMessage(msg, [new MessageChannel().port2])
+
   // controller.postMessage("テストザマス", [new MessageChannel().port2])
   // const channel = new MessageChannel();
   // navigator.serviceWorker.controller.postMessage(msg, [channel.port2])
@@ -214,5 +215,5 @@ function sendMessage(msg) {
 function reload() {
   pages.title.change();
   isLoopRunnable = false;
-  
+
 }
