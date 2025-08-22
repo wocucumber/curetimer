@@ -194,6 +194,8 @@ function finishFive() {
 }
 
 function sendMessage(msg) {
+  if (navigator.serviceWorker.controller === undefined) return location.reload(alert("コントローラー不在のためリロード"));
+
   navigator.serviceWorker.controller.postMessage(msg, [new MessageChannel().port2])
   // controller.postMessage("テストザマス", [new MessageChannel().port2])
   // const channel = new MessageChannel();
