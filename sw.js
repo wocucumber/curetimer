@@ -31,7 +31,7 @@ self.addEventListener("install", function(e) {
   e.waitUntil(
     caches.open(cacheName).then(cache => {
       return cache.addAll([...filesToCache.map(e=>"/curetimer"+e), 
-        "https://fonts.gstatic.com/s/pottaone/v18/FeVSS05Bp6cy7xI-Yfxg2pRmuWxWwg.woff2"])
+        "https://fonts.googleapis.com/css2?family=Mozilla+Text&family=Potta+One&display=swap"])
     })
   );
 });
