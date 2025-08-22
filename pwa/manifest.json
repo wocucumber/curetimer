@@ -2,11 +2,11 @@
     "name": "クイのキュアtimer",
     "short_name": "クイtimer",
     "lang": "ja-JP",
+    "id": "apuchannel-cure-timer",
     "start_url": "/curetimer/index.html",
     "display": "standalone",
     "background_color": "white",
     "theme_color": "white",
-    "scope": "/curetimer/",
     "icons": [
         {
             "src": "/curetimer/favicons/icon-16x16.png",

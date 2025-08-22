@@ -1,67 +1,87 @@
 {
-	"name":				"",
-	"short_name":		"",
-	"description":		"",
-	"start_url":		"/",
-	"display":			"standalone",
-	"orientation":		"any",
-	"background_color":	"#fff",
-	"theme_color":		"#fff",
-	"icons": [
-		{
-			"src": "/android-chrome-36x36.png",
-			"sizes": "36x36",
-			"type": "image/png"
-		},
-		{
-			"src": "/android-chrome-48x48.png",
-			"sizes": "48x48",
-			"type": "image/png"
-		},
-		{
-			"src": "/android-chrome-72x72.png",
-			"sizes": "72x72",
-			"type": "image/png"
-		},
-		{
-			"src": "/android-chrome-96x96.png",
-			"sizes": "96x96",
-			"type": "image/png"
-		},
-		{
-			"src": "/android-chrome-128x128.png",
-			"sizes": "128x128",
-			"type": "image/png"
-		},
-		{
-			"src": "/android-chrome-144x144.png",
-			"sizes": "144x144",
-			"type": "image/png"
-		},
-		{
-			"src": "/android-chrome-152x152.png",
-			"sizes": "152x152",
-			"type": "image/png"
-		},
-		{
-			"src": "/android-chrome-192x192.png",
-			"sizes": "192x192",
-			"type": "image/png"
-		},
-		{
-			"src": "/android-chrome-256x256.png",
-			"sizes": "256x256",
-			"type": "image/png"
-		},
-		{
-			"src": "/android-chrome-384x384.png",
-			"sizes": "384x384",
-			"type": "image/png"
-		},
-		{
-			"src": "/android-chrome-512x512.png",
-			"sizes": "512x512",
-			"type": "image/png"
-		}
-	]
+    "name": "クイのキュアtimer",
+    "short_name": "クイtimer",
+    "lang": "ja-JP",
+    "id": "apuchannel-cure-timer",
+    "start_url": "/curetimer/index.html",
+    "display": "standalone",
+    "background_color": "white",
+    "theme_color": "white",
+    "icons": [
+        {
+            "src": "/curetimer/favicons/icon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "/curetimer/favicons/icon-24x24.png",
+            "sizes": "24x24",
+            "type": "image/png"
+        },
+        {
+            "src": "/curetimer/favicons/icon-36x36.png",
+            "sizes": "36x36",
+            "type": "image/png"
+        },
+        {
+            "src": "/curetimer/favicons/icon-48x48.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "/curetimer/favicons/icon-72x72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "/curetimer/favicons/icon-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "/curetimer/favicons/icon-128x128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        },
+        {
+            "src": "/curetimer/favicons/icon-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "/curetimer/favicons/icon-152x152.png",
+            "sizes": "152x152",
+            "type": "image/png"
+        },
+        {
+            "src": "/curetimer/favicons/icon-160x160.png",
+            "sizes": "160x160",
+            "type": "image/png"
+        },
+        {
+            "src": "/curetimer/favicons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/curetimer/favicons/icon-196x196.png",
+            "sizes": "196x196",
+            "type": "image/png"
+        },
+        {
+            "src": "/curetimer/favicons/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/curetimer/favicons/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/curetimer/favicons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
 }
