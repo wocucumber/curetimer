@@ -26,6 +26,7 @@ let maxTime = 60;
 let state = STATES.ONE;
 
 let lastClick = 0;
+let isLoopRunnable = false;
 
 $(function() {
   main();
@@ -99,7 +100,7 @@ function setupClickEvents() {
 
     if (now - lastClick < 1000) {
       if (confirm("再読み込みしてもいい？"))
-        location.reload();
+        reload();
     }
     
     lastClick = now;
@@ -141,6 +142,7 @@ function startTimer() {
 
   sendMessage("startOne");
 
+  isLoopRunnable = true;
   loop();
 }
 function updateBarValue(value) {
@@ -155,6 +157,8 @@ function updateTimerValue(reamingTime) {
 }
 
 function loop() {
+  if (!isLoopRunnable) return;
+
   const reamingTime = Math.max(maxTime - ((Date.now() - startedAt) / 1000), 0);
 
   if (state === STATES.ONE) 
@@ -191,10 +195,11 @@ function finishOne() {
 }
 function finishFive() {
   audios.tanutanu.play();
+  isLoopRunnable = false;
 }
 
 function sendMessage(msg) {
-  if (!navigator.serviceWorker.controller) return location.reload(alert("コントローラー不在のためリロード"));
+  // if (!navigator.serviceWorker.controller) return location.reload(alert("コントローラー不在のためリロード"));
 
   navigator.serviceWorker.controller.postMessage(msg, [new MessageChannel().port2])
   // controller.postMessage("テストザマス", [new MessageChannel().port2])
@@ -203,4 +208,11 @@ function sendMessage(msg) {
   // navigator.serviceWorker.controller.postMessage("テストザマス", [m])
   // channel.port2.postMessage(msg);
   console.log("message was sended.");
+}
+
+
+function reload() {
+  pages.title.change();
+  isLoopRunnable = false;
+  
 }

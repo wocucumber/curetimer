@@ -24,14 +24,25 @@ const filesToCache = [
   "/images/startBtn.PNG",
 ];
 
+const otherFilesToCache = [
+  "https://fonts.googleapis.com/css2?family=Mozilla+Text&family=Potta+One&display=swap",
+  "https://code.jquery.com/jquery-3.7.1.min.js",
+  "https://fonts.gstatic.com/s/mozillatext/v1/SZcr3FrnJ7S7WZIff2mJ7Tbp4zu7ULu3HkPOB4UcDNdbVKutKXt0lA.woff2",
+  "https://fonts.gstatic.com/s/pottaone/v18/FeVSS05Bp6cy7xI-YfxQ2J5hm24c1sY_XjjYC1QMPbpH11Hj8t620eOL.108.woff2",
+  "https://fonts.gstatic.com/s/pottaone/v18/FeVSS05Bp6cy7xI-YfxQ2J5hm24c1sY_XjjYC1QMPbpH11Hj8t620eOL.119.woff2",
+  "https://fonts.gstatic.com/s/pottaone/v18/FeVSS05Bp6cy7xI-YfxQ2J5hm24c1sY_XjjYC1QMPbpH11Hj8t620eOL.114.woff2",
+  "https://fonts.gstatic.com/s/pottaone/v18/FeVSS05Bp6cy7xI-YfxQ2J5hm24c1sY_XjjYC1QMPbpH11Hj8t620eOL.115.woff2",
+  "https://fonts.gstatic.com/s/pottaone/v18/FeVSS05Bp6cy7xI-YfxQ2J5hm24c1sY_XjjYC1QMPbpH11Hj8t620eOL.94.woff2",
+  "https://fonts.gstatic.com/s/pottaone/v18/FeVSS05Bp6cy7xI-YfxQ2J5hm24c1sY_XjjYC1QMPbpH11Hj8t620eOL.100.woff2"
+];
+
 
 // キャッシュする
 self.addEventListener("install", function(e) {
   console.log("Service worker was registered.");
   e.waitUntil(
     caches.open(cacheName).then(cache => {
-      return cache.addAll([...filesToCache.map(e=>"/curetimer"+e), 
-        "https://fonts.googleapis.com/css2?family=Mozilla+Text&family=Potta+One&display=swap"])
+      return cache.addAll([...filesToCache.map(e=>"/curetimer"+e), ...otherFilesToCache])
     })
   );
 });
