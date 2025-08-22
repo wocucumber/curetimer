@@ -1,6 +1,7 @@
 // https://qiita.com/kkuzu/items/bb6dc999e6b44af5da2e
 // https://note.com/neji_bit/n/nca6cf8b2d2d2
 
+const START_FILE_AMOUNT = 8;
 
 const cacheName = "apuchannel-cure-timer-pwa";
 const filesToCache = [
@@ -26,6 +27,9 @@ const filesToCache = [
   "/fonts/MozillaText-Regular.ttf",
   "/fonts/PottaOne-Regular.ttf",
 ];
+for (let i = 0; i < START_FILE_AMOUNT; i ++) {
+  filesToCache.push("/audios/start"+(i+1)+".mp3");
+}
 
 const otherFilesToCache = [
   // "https://fonts.googleapis.com/css2?family=Mozilla+Text&family=Potta+One&display=swap",

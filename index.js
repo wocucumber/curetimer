@@ -10,6 +10,7 @@ const STATES = {
 const audios = {
   wanko: new Audio("audios/wnk.mp3"),
   tanutanu: new Audio("audios/tntn.mp3"),
+  start: new Audio("audios/start"+(Math.floor(Math.random() * START_FILE_AMOUNT) + 1)+".mp3")
 }
 
 /** @type {HTMLElement} */
@@ -144,6 +145,8 @@ function startTimer() {
 
   isLoopRunnable = true;
   loop();
+
+  audios.start.play();
 }
 function updateBarValue(value) {
   mainBar.style = "top: calc((100% - 70px) * "+(Math.floor(value*1000)/1000)+")";
